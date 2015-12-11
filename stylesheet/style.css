@@ -1,0 +1,325 @@
+/******************Reset CSS********************/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a{
+  text-decoration: none;
+}
+@font-face {
+    font-family: 'gondola';
+    src: url('../ressource/web_fonts/gondolasd_regular_macroman/Gondola_SD-webfont.eot');
+    src: url('../ressource/web_fonts/gondolasd_regular_macroman/Gondola_SD-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../ressource/web_fonts/gondolasd_regular_macroman/Gondola_SD-webfont.woff') format('woff'),
+         url('../ressource/web_fonts/gondolasd_regular_macroman/Gondola_SD-webfont.ttf') format('truetype'),
+         url('../ressource/web_fonts/gondolasd_regular_macroman/Gondola_SD-webfont.svg#gondola_sdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'calligraffiti';
+    src: url('../ressource/web_fonts/calligraffiti_regular_macroman/Calligraffiti-webfont.eot');
+    src: url('../ressource/web_fonts/calligraffiti_regular_macroman/Calligraffiti-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../ressource/web_fonts/calligraffiti_regular_macroman/Calligraffiti-webfont.woff') format('woff'),
+         url('../ressource/web_fonts/calligraffiti_regular_macroman/Calligraffiti-webfont.ttf') format('truetype'),
+         url('../ressource/web_fonts/calligraffiti_regular_macroman/Calligraffiti-webfont.svg#calligraffitiregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'walkway';
+    src: url('../ressource/web_fonts/walkwaysemibold_regular_macroman/Walkway_SemiBold-webfont.eot');
+    src: url('../ressource/web_fonts/walkwaysemibold_regular_macroman/Walkway_SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../ressource/web_fonts/walkwaysemibold_regular_macroman/Walkway_SemiBold-webfont.woff') format('woff'),
+         url('../ressource/web_fonts/walkwaysemibold_regular_macroman/Walkway_SemiBold-webfont.ttf') format('truetype'),
+         url('../ressource/web_fonts/walkwaysemibold_regular_macroman/Walkway_SemiBold-webfont.svg#walkway_semiboldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'walkway_bold';
+    src: url('../ressource/web_fonts/walkwaybold_regular_macroman/Walkway_Bold-webfont.eot');
+    src: url('../ressource/web_fonts/walkwaybold_regular_macroman/Walkway_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../ressource/web_fonts/walkwaybold_regular_macroman/Walkway_Bold-webfont.woff') format('woff'),
+         url('../ressource/web_fonts/walkwaybold_regular_macroman/Walkway_Bold-webfont.ttf') format('truetype'),
+         url('../ressource/web_fonts/walkwaybold_regular_macroman/Walkway_Bold-webfont.svg#walkway_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'seasideresortnfregular';
+    src: url('../ressource/web_fonts/seasideresortnf_regular_macroman/SEASRN__-webfont.eot');
+    src: url('../ressource/web_fonts/seasideresortnf_regular_macroman/SEASRN__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../ressource/web_fonts/seasideresortnf_regular_macroman/SEASRN__-webfont.woff') format('woff'),
+         url('../ressource/web_fonts/seasideresortnf_regular_macroman/SEASRN__-webfont.ttf') format('truetype'),
+         url('../ressource/web_fonts/seasideresortnf_regular_macroman/SEASRN__-webfont.svg#seasideresortnfregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+  	background: url('../ressource/stripe.png') repeat fixed;
+    font-family: "walkway_bold";
+}
+h4 a, h1 a {
+	color: red;
+	text-decoration: none;
+}
+h4 a:visited, h1 a:visited, a:visited {
+	color: #c0392b;
+}
+a {
+	color: #c0392b;
+}
+h2 {
+  color: #e74c3c;
+  cursor: pointer;
+}
+/*******************Accueil**********************/
+#myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100));
+	background:-moz-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-webkit-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-o-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-ms-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100',GradientType=0);
+	background-color:#fe1a00;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+  width: 150px;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+}
+#myButton:active {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00));
+	background:-moz-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-webkit-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-o-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-ms-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00',GradientType=0);
+	background-color:#ce0100;
+}
+#affichage {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+#affichage h1, #affichage p{
+text-align: center;
+}
+#affichage h1 {
+  color: #e74c3c;
+  font-size: 3em;
+  padding: 10px 0;
+}
+#affichage p {
+  font-size: 1.5em;
+  font-style: italic;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+/*******************HEADER**********************/
+
+.tete {
+  background-color: #bdc3c7;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-shadow: 0px 0 3px black;
+  z-index: 10;
+}
+.tete2 {
+  background-color: rgba(189, 195, 199, 0.8);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-shadow: 0px 0 3px black;
+  z-index: 10;
+}
+nav li, nav ul {
+	text-align: center;
+	/* color: #c0392b; */
+	font-size: 28px;
+	display: inline-block;
+}
+nav ul {
+  width: 100%;
+}
+nav li {
+  margin: 0 50px;
+}
+.divmenu {
+  cursor : pointer;
+  border-radius: 5px;
+  padding: 10px 10px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+a:hover {
+  color: #e74c3c;
+}
+/******************SECTION**********************/
+
+section {
+  width: 80%;
+  margin: auto;
+  background: #bdc3c7;
+  padding: 10px 0;
+}
+#divlogo {
+  height:84px;
+  width: 80%;
+  margin: auto;
+  margin-top: 48px;
+  position: relative;
+}
+#logo h1 {
+  font-size: 2em;
+  margin: 28px 20px;
+  display: inline-block;
+}
+#logo{
+  height: 84px;
+  background-color: #ecf0f1;
+  border-bottom: 1px solid #c0392b;
+  display: inline-block;
+  width: 100%;
+  font-family: seasideresortnfregular;
+}
+#logo p{
+  display: inline-block;
+  font-style: italic;
+}
+section h2 {
+  font-size: 1.3em;
+  padding-bottom: 10px;
+}
+article {
+  width: 95%;
+  margin: auto;
+  background: #ecf0f1;
+  border-radius: 20px;
+  box-shadow: 0 0 8px gray;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+article div {
+  padding: 0 20px;
+}
+article p {
+  text-align: justify;
+  padding: 2px;
+}
+.para img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+.divphoto {
+  float: right;
+  margin-top: 34px;
+}
+#reseauxD img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+#reseauxD {
+  position: absolute;
+  top: 4px;
+  right: 10%;
+}
+#reseauxG img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+#reseauxG {
+  position: absolute;
+  top: 4px;
+  left: 10%;
+}
+section article:last-child {
+  margin-bottom : 0;
+}
+/******************FOOTER**********************/
+
+footer {
+  width: 80%;
+  margin: auto;
+  background-color: #ecf0f1;
+  border-top: 1px solid #c0392b;
+}
+footer p {
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+}
