@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JeuxCV</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="stylesheet/foundation_icons.css">
+    <link rel="stylesheet" href="stylesheet/css.css">
+  </head>
+  <body>
+    <audio src="ressource/audio/smoothy_chill.mp3" loop id="musique"></audio>
+    <audio src="ressource/audio/step_bjorn.mp3" class="step" id="bjornStep"></audio>
+    <audio src="ressource/audio/step_roxy.mp3" class="step" id="roxyStep"></audio>
+    <audio src="ressource/audio/step_charlie.mp3" class="step" id="charlieStep"></audio>
+    <audio src="ressource/audio/jump_bjorn.mp3" class="jump" id="bjornJump"></audio>
+    <audio src="ressource/audio/jump_roxy.mp3" class="jump" id="roxyJump"></audio>
+    <audio src="ressource/audio/jump_charlie.mp3" class="jump" id="charlieJump"></audio>
+    <audio src="ressource/audio/grab.mp3" id="grab"></audio>
+    <div id="bloc_jeu">
+      <header class="tete" id="tete">
+        <nav>
+          <ul id="menu">
+            <li><div class="divmenu"><a href="accueil.html">Accueil</a></div></li>
+            <li><div class="divmenu"><a href="projet.html">Projets</a></div></li>
+            <li><div class="divmenu"><a href="game.html">CV Jeu</a></div></li>
+            <li><div class="divmenu"><a href="ressource/cv/cv_romain_huc.pdf" target="_blank"  >CV.pdf</a></div></li>
+            <li><div class="divmenu"><a href="contact.html">Contact</a></div></li>
+          </ul>
+          <div id="reseauxD">
+            <a href="https://fr.linkedin.com/in/erehuc"><img src="ressource/linkedin.png" alt="Lien vers mon LinkedIn" title="Mon profil LinkedIn" class="tooltip"></a><a href="http://www.viadeo.com/fr/profile/EreHuc"><img src="ressource/Viadeo.png" alt="Lien vers mon Viadeo" title="Mon profil Viadeo" class="tooltip"></a>
+          </div>
+          <div id="reseauxG">
+            <a href="https://github.com/EreHuc"><img src="ressource/Github.png" alt="Lien vers mon Github" title="Mon repo Github" class="tooltip"></a><a href="https://twitter.com/EreHuc"><img src="ressource/twitter.png" alt="Lien vers mon Twitter" title="Mon twitter" class="tooltip"></a>
+          </div>
+        </nav>
+      </header>
+      <div id="divlogo">
+        <div id="logo">
+          <h1>EreHuc</h1>
+          <p>Développeur JavaScript</p>
+          <img src="ressource/jeu/bjorn/bjorn.png" alt="Bjorn" title="C'est parti pour l'aventure !" class="tooltip">
+        </div>
+      </div>
+      <section>
+        <div id="rule">
+          Aide les aliens à récupérer mes compétences ! Une fois récupérées celles-ci seront affichées plus bas.
+        </div>
+        <div id="jeu">
+          <div id="accJeu">
+            <div id="menuJeu" unselectable="on">
+              <ul>
+                <li>JOUER</li>
+                <li>COMMENT JOUER</li>
+                <li>CREDITS</li>
+              </ul>
+            </div>
+            <div id="howTo" style="display:none" unselectable="on">
+              <p>
+                Utiliser les flèches directionnelles <i class="fi-arrow-left"></i> et <i class="fi-arrow-right"></i> pour déplacer l'alien à gauche ou à droite.
+              </p>
+              <p>
+                Utiliser la flèche <i class="fi-arrow-up"></i> pour sauter.
+              </p>
+              <p>
+                RETOUR
+              </p>
+            </div>
+            <div id="credits" style="display:none" unselectable="on">
+              <p>
+                <u>Développement & design :</u><br> Romain "EreHuc" HUC @ <a href="index.html">www.erehuc.fr</a>
+              </p>
+              <p>
+                <u>Musique & bruitage :</u><br>Gaétan "S'Croc" PETIT @ <a href="https://soundcloud.com/ga-tan-petit-2">S'Croc sur Soundcloud</a>
+              </p>
+              <p>
+                <u>Sprite & image :</u><br> Kenney Vleugels @ <a href="http://kenney.nl/">http://kenney.nl/</a>
+              </p>
+              <p>
+                RETOUR
+              </p>
+            </div>
+            <div id="select" style="display: none" unselectable="on">
+              <p>
+                Choisissez votre Alien !
+              </p>
+              <div id="persoAJouer">
+                <div id="left" class="arrow"><i class="fi-arrow-left"></i></div>
+                <img src="ressource/jeu/bjorn/bjorn.png" alt="Perso Bjorn" id="bjorn" class="display"/>
+                <img src="ressource/jeu/charlie/charlie.png" alt="Perso Charlie" id="charlie" style="display: none"/>
+                <img src="ressource/jeu/roxy/roxy.png" alt="Perso Roxy" id="roxy" style="display: none"/>
+                <div id="right" class="arrow"><i class="fi-arrow-right"></i></div>
+              </div>
+              <button type="button" name="button" id="button">Ok !</button>
+            </div>
+          </div>
+          <div id="score" unselectable="on">Score : 0</div>
+          <div id="musiqueOpt" unselectable="on"><i class="fi-volume"></i> Musique</div>
+          <div id="fxOpt" unselectable="on"><i class="fi-volume"></i> Bruit</div>
+          <div id="alien" unselectable="on">Alien</div>
+          <div id="plusUN" style="position: absolute; display: none">+1</div>
+          <canvas id="canvasJeu" width="1015" height="500" style="display:none">Javascript n'est pas activé ou votre navigateur n'est pas à jour</canvas>
+          <canvas id="canvasJoueur" width="1015" height="500" style="display:none"></canvas>
+          <img src="ressource/jeu/tiles.png" alt="Tuile du jeu" style="display:none">
+        </div>
+        <div id="comp">
+          <div id="front">
+            <div id="html5" class="comp">
+              <img src="ressource/html5.png" alt="image html5" />
+              <p>
+                Maîtrise de l'<span>HTML5</span>
+              </p>
+            </div><!--
+            --><div id="css3" class="comp">
+              <img src="ressource/css3.png" alt="image css3" />
+              <p>
+                Maîtrise du <span>CSS3</span>
+              </p>
+            </div><!--
+            --><div id="js" class="comp">
+              <img src="ressource/js.png" alt="image js" />
+              <p>
+                Maîtrise du <span>JavaScript</span>
+              </p>
+            </div><!--
+            --><div id="jquery" class="comp">
+              <img src="ressource/jquery.png" alt="image jquery" />
+              <p>
+                Maîtrise de <span>jQuery</span>
+              </p>
+            </div><!--
+            --><div id="bootstrap" class="comp">
+              <img src="ressource/bootstrap.png" alt="image bootstrap" style="top: -9px; right: 3px"/>
+              <p>
+                Maîtrise de <span>Bootstrap</span>
+              </p>
+            </div><!--
+            --><div id="angularjs" class="comp">
+              <img src="ressource/angular.png" alt="image angularjs" />
+              <p>
+                Maîtrise d'<span>AngularJS</span>
+              </p>
+            </div>
+          </div>
+          <div id="back">
+            <div id="mongodb" class="comp">
+              <img src="ressource/mongodb.png" alt="image mongodb" style="top: -9px; right: 3px"/>
+              <p>
+                Maîtrise de <span>MongoDB</span>
+              </p>
+            </div><!--
+            --><div id="nodejs" class="comp">
+              <img src="ressource/nodejs.png" alt="image nodejs" />
+              <p>
+                Maîtrise de <span>NodeJS</span>
+              </p>
+            </div><!--
+            --><div id="ajax" class="comp">
+            <img src="ressource/ajax.png" alt="image ajax" style="top: -10px"/>
+              <p>
+                Maîtrise de l'<span>Ajax</span>
+              </p>
+            </div><!--
+            --><div id="meteorjs" class="comp">
+              <img src="ressource/meteorjs.png" alt="image meteorjs" />
+              <p>
+                Maîtrise de <span>MeteorJS</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p>Copyright EreHuc 2015 - 2016</p><p><a href="contact.html">Me contacter !</a></p><p><a href="mention.html">Mentions légales</a></p>
+      </footer>
+    </div>
+    <script type="text/javascript" src="script/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="script/game/variablegame.js"></script>
+    <script type="text/javascript" src="script/tile.js"></script>
+    <script type="text/javascript" src="script/player.js"></script>
+    <script type="text/javascript" src="script/game/map.js"></script>
+    <script type="text/javascript" src="script/game/executegame.js"></script>
+    <script type="text/javascript" src="script/game/scriptgame.js"></script>
+  </body>
+</html>

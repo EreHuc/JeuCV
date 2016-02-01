@@ -1,0 +1,93 @@
+var carte = function (arg) {
+  var ground = new platform('tiles.png', ctx), objet, obstacle;
+  switch (arg) {
+    case 1:
+      obstacle = [];
+      objet = [];
+      obstacle.push(ground.dessinerTile(ground.tile[2], 0, lSol, 465, 1));  //bloc de départ (obstacle[0])
+      obstacle.push(ground.dessinerTile(ground.tile[2], 0, 35, 380, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 35, 70, 380, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], lSol-70, lSol, 430, 2));
+      obstacle.push(ground.dessinerTile(ground.tile[2], lSol-70, lSol-35, 395, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], lSol-35, lSol, 395, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[2], lSol-35, lSol, 360, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 535, lSol-105, 300, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], lSol-105, lSol-70, 300, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 490, 525, 290, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 480, 515, 280, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 470, 505, 270, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 460, 495, 260, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 450, 485, 250, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 440, 475, 240, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], 430, 465, 265, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], 440, 475, 265, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], 430, 535, 300, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 430, 465, 230, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], 395, 430, 230, 2));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 220, 395, 230, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[0], 185, 220, 230, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 0, 70, 230, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 70, 105, 230, 1));
+      objet.push(ground.dessinerTile(ground.tile[6], 0, 35, 345, 1));
+      objet.push(ground.dessinerTile(ground.tile[7], 235, 270, 195, 1));
+      objet.push(ground.dessinerTile(ground.tile[8], 675, 710, 265, 1));
+      break;
+    case 2:
+      obstacle = [];
+      objet = [];
+      obstacle.push(ground.dessinerTile(ground.tile[2], lSol-245, lSol-70, 210, 1));  //bloc de départ (obstacle[0])
+      obstacle.push(ground.dessinerTile(ground.tile[16], lSol-280, lSol-245, 0, 7));
+      obstacle.push(ground.dessinerTile(ground.tile[1], lSol-70, lSol-35, 210, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 175, lSol-140, 465, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], lSol-35, lSol, 360, 4));
+      obstacle.push(ground.dessinerTile(ground.tile[2], lSol-35, lSol, 325, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], lSol-70, lSol-35, 395, 3));
+      obstacle.push(ground.dessinerTile(ground.tile[2], lSol-70, lSol-35, 360, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], lSol-105, lSol-70, 430, 3));
+      obstacle.push(ground.dessinerTile(ground.tile[2], lSol-105, lSol-70, 395, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], lSol-140, lSol-105, 465, 3));
+      obstacle.push(ground.dessinerTile(ground.tile[2], lSol-140, lSol-105, 430, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], 0, 35, 325, 5));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 0, 35, 290, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], 35, 70, 360, 4));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 35, 70, 325, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], 70, 105, 395, 3));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 70, 105, 360, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], 105, 140, 430, 2));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 105, 140, 395, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], 140, 175, 465, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 140, 175, 430, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[0], 105, 140, 230, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 140, 280, 230, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 280, 315, 230, 1));
+      objet.push(ground.dessinerTile(ground.tile[10], lSol-35, lSol, 290, 1));
+      objet.push(ground.dessinerTile(ground.tile[9], 250, 285, 195, 1));
+      objet.push(ground.dessinerTile(ground.tile[11], 500, 535, 430, 1));
+      break;
+    case 3:
+      obstacle = [];
+      objet = [];
+      obstacle.push(ground.dessinerTile(ground.tile[2], 0, 70, 120, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 70, 105, 120, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 0, lSol, 470, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 175, 210, 395, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[0], 310, 345, 375, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 345, 380, 375, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 480, lSol-35, 330, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], 480, lSol, 365, 5));
+      obstacle.push(ground.dessinerTile(ground.tile[2], 515, lSol-175, 220, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[0], 480, 515, 220, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], lSol-175, lSol-140, 220, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[16], lSol-35, lSol, 120, 7));
+      obstacle.push(ground.dessinerTile(ground.tile[16], 480, lSol, 85, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[0], lSol-70, lSol-35, 260, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[0], 300, 335, 195, 1));
+      obstacle.push(ground.dessinerTile(ground.tile[1], 335, 370, 195, 1));
+      objet.push(ground.dessinerTile(ground.tile[12], 175, 210, 360, 1));
+      objet.push(ground.dessinerTile(ground.tile[13], 780, 815, 295, 1));
+      objet.push(ground.dessinerTile(ground.tile[15], 650, 685, 185, 1));
+      objet.push(ground.dessinerTile(ground.tile[14], 317, 352, 160, 1));
+      break;
+  }
+  return {obstacle: obstacle, objet: objet, nom: 'map'+arg};
+};

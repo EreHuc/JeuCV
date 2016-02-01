@@ -1,0 +1,400 @@
+/******************Reset CSS********************/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a{
+  text-decoration: none;
+}
+@font-face {
+    font-family: 'walkway_bold';
+    src: url('../ressource/web_fonts/walkwaybold_regular_macroman/Walkway_Bold-webfont.eot');
+    src: url('../ressource/web_fonts/walkwaybold_regular_macroman/Walkway_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../ressource/web_fonts/walkwaybold_regular_macroman/Walkway_Bold-webfont.woff') format('woff'),
+         url('../ressource/web_fonts/walkwaybold_regular_macroman/Walkway_Bold-webfont.ttf') format('truetype'),
+         url('../ressource/web_fonts/walkwaybold_regular_macroman/Walkway_Bold-webfont.svg#walkway_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+  	background: url('../ressource/stripe.png') repeat fixed;
+    font-family: "walkway_bold";
+}
+h4 a, h1 a {
+	color: red;
+	text-decoration: none;
+}
+h4 a:visited, h1 a:visited, a:visited {
+	color: #c0392b;
+}
+a {
+	color: #c0392b;
+}
+h2 {
+  color: #c0392b;
+  cursor: pointer;
+}
+h2:hover {
+  /*color: #e74c3c;*/
+  color: #33574C;
+}
+/*******************Accueil**********************/
+#accueil {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.myButton {
+  -moz-box-shadow: 0px 1px 5px 1px gray;
+	-webkit-box-shadow: 0px 1px 1px 5px gray;
+	box-shadow: 0px 1px 5px 1px gray;
+	background-color:#ecf0f1;
+	-moz-border-radius:27px;
+	-webkit-border-radius:27px;
+	border-radius:27px;
+	border:1px none #4F4F4F;
+	display:inline-block;
+	cursor:pointer;
+	color:#e74c3c;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+  width: 150px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+}
+#myButton:active {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bdc3c7), color-stop(1, #ecf0f1));
+	background:-moz-linear-gradient(top, #bdc3c7 5%, #ecf0f1 100%);
+	background:-webkit-linear-gradient(top, #bdc3c7 5%, #ecf0f1 100%);
+	background:-o-linear-gradient(top, #bdc3c7 5%, #ecf0f1 100%);
+	background:-ms-linear-gradient(top, #bdc3c7 5%, #ecf0f1 100%);
+	background:linear-gradient(to bottom, #bdc3c7 5%, #ecf0f1 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bdc3c7', endColorstr='#ecf0f1',GradientType=0);
+	background-color: #bdc3c7;
+}
+#affichage {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  cursor: default;
+}
+#affichage h1, #affichage p{
+text-align: center;
+}
+#affichage h1 {
+  color: #e74c3c;
+  font-size: 3em;
+  padding: 10px 0;
+}
+#affichage p {
+  font-size: 1.5em;
+  font-style: italic;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+#player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 26px;
+
+}
+#player i {
+  font-family: foundation-icons;
+  font-size: 2em;
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  cursor: pointer;
+}
+#player i:hover {
+  color: #7f8c8d;
+}
+#player p {
+  position: absolute;
+  left: 29px;
+  top: 9px;
+
+}
+/*******************HEADER**********************/
+
+.tete {
+  background-color: #bdc3c7;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  -moz-box-shadow: 0px 0 3px black;
+  -webkit-box-shadow: 0px 0 3px black;
+  box-shadow: 0px 0 3px black;
+  z-index: 10;
+}
+@media (max-width: 700px) {
+  .tete2 {
+    background-color: rgba(189, 195, 199, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    -moz-box-shadow: 0px 0 3px black;
+    -webkit-box-shadow: 0px 0 3px black;
+    box-shadow: 0px 0 3px black;
+    z-index: 10;
+  }
+}
+@media (min-width: 700px) {
+  .tete2 {
+    background-color: rgba(189, 195, 199, 0.5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    -moz-box-shadow: 0px 0 3px black;
+    -webkit-box-shadow: 0px 0 3px black;
+    box-shadow: 0px 0 3px black;
+    z-index: 10;
+  }
+}
+nav ul {
+  width: 100%;
+  height: 48px;
+}
+@media (max-width: 1100px){
+  nav li {
+    margin: 0 10px;
+  }
+}
+@media (min-width: 1100px){
+  nav li {
+    margin: 0 50px;
+  }
+}
+@media (max-width: 700px){
+  nav li, nav ul {
+    text-align: center;
+    font-size: 19px;
+    display: inline-block;
+  }
+  nav li {
+    margin: 0 3px;
+  }
+}
+@media (min-width: 700px) {
+  nav li, nav ul {
+    text-align: center;
+    font-size: 28px;
+    display: inline-block;
+  }
+}
+.divmenu {
+  cursor : pointer;
+  border-radius: 5px;
+  -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+  padding: 5px;
+  margin: 5px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.divmenu:hover{
+    box-shadow: 0px 0px 3px gray;
+}
+a:hover {
+  color: #33574C;
+}
+/******************SECTION**********************/
+
+section {
+  width: 80%;
+  margin: auto;
+  background: #95a5a6;
+  padding: 10px 0;
+}
+#divlogo {
+  height:84px;
+  width: 80%;
+  margin: auto;
+  margin-top: 48px;
+  position: relative;
+}
+#logo h1 {
+  font-size: 2em;
+  margin: 28px 20px;
+  display: inline-block;
+  color: #e74c3c;
+}
+#logo{
+  height: 84px;
+  background-color: #ecf0f1;
+  border-bottom: 1px solid #c0392b;
+  display: inline-block;
+  width: 100%;
+  font-family: "walkway_bold";
+}
+#logo p{
+  display: inline-block;
+  font-style: italic;
+}
+#logo img{
+  position: absolute;
+  height: 50%;
+  right: 5%;
+  top: 23%;
+}
+@media (min-width: 700px) {
+  section h2 {
+    font-size: 1.6em;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 700px) {
+  section h2 {
+    font-size: 0.7em;
+    padding: 15px 20px;
+  }
+}
+article {
+  width: 98%;
+  margin: auto;
+  background: #ecf0f1;
+  padding: 0px 0px 20px 0;
+}
+article p {
+  text-align: justify;
+  padding: 4px 20px;
+}
+p cite{
+  font-style: italic;
+}
+.para img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  -moz-border-radius:100px;
+	-webkit-border-radius:100px;
+}
+.divphoto {
+  float: right;
+  margin: 0 20px;
+  margin-top: 40px;
+}
+#reseauxD img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+#reseauxG img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+@media (min-width: 800px) {
+  #reseauxD {
+    position: absolute;
+    top: 4px;
+    right: 0;
+  }
+  #reseauxG {
+    position: absolute;
+    top: 4px;
+    left: 0;
+  }
+}
+@media (max-width: 800px) {
+  #reseauxG,#reseauxD {
+    display : none;
+  }
+}
+section article:last-child {
+  margin-bottom : 0;
+  border-radius: 0 0 20px 20px;
+  -moz-border-radius: 0 0 20px 20px;
+	-webkit-border-radius: 0 0 20px 20px;
+}
+section article:first-child {
+  border-radius: 20px 20px 0 0;
+  -moz-border-radius: 20px 20px 0 0;
+	-webkit-border-radius: 20px 20px 0 0;
+}
+section article:nth-child(2n) {
+  background-color: #D8D8D8;
+}
+/******************FOOTER**********************/
+
+footer {
+  width: 80%;
+  margin: auto;
+  background-color: #ecf0f1;
+  border-top: 1px solid #c0392b;
+}
+footer p {
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+}
+/**********************************************/
+@media (min-width: 700px) {
+  p {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 700px) {
+  p {
+    font-size: 0.5em;
+  }
+}
